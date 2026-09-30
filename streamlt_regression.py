@@ -54,7 +54,7 @@ geo_encoded_df = pd.DataFrame(geo_encoded, columns=onehot_encoder_geo.get_featur
 
 
 input_data = pd.concat([input_data.reset_index(drop=True), geo_encoded_df], axis=1)
-input_data=pd.concat([input_data, remaining_features],axis=1)
+input_data=pd.concat([input_data,remaining_features],axis=1)
 
 input_data_scaled = scaler.transform(input_data)
 
